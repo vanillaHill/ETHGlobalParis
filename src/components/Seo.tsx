@@ -2,13 +2,13 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const defaultMeta = {
-  title: "Rply",
-  siteName: "Rply",
-  description: "Mail flow manager",
-  url: "https://rply",
+  title: "ui",
+  siteName: "ui",
+  description: "Circuit Breaker",
+  url: "-",
   type: "website",
   robots: "follow, index",
-  image: "https://rply/images/fortress-og.png",
+  image: "-",
 };
 
 type SeoProps = {
@@ -39,7 +39,7 @@ export default function Seo(props: SeoProps) {
       <meta property="og:title" content={meta.title} />
       <meta name="image" property="og:image" content={meta.image} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@Fortress_Fi" />
+      <meta name="twitter:site" content="-" />
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta name="twitter:image" content={meta.image} />
