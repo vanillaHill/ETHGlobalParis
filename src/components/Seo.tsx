@@ -43,41 +43,9 @@ export default function Seo(props: SeoProps) {
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta name="twitter:image" content={meta.image} />
-
-      {/* Favicons */}
-      {favicons.map((linkProps) => (
-        <link key={linkProps.href} {...linkProps} />
-      ))}
       <meta name="msapplication-TileColor" content="#c94a87" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000000" />
     </Head>
   );
 }
-
-const favicons: Array<React.ComponentPropsWithoutRef<"link">> = [
-  {
-    rel: "apple-touch-icon",
-    sizes: "180x180",
-    href: "/favicon/apple-touch-icon.png",
-  },
-  {
-    rel: "icon",
-    type: "image/png",
-    sizes: "32x32",
-    href: "/favicon/favicon-32x32.png",
-  },
-  {
-    rel: "icon",
-    type: "image/png",
-    sizes: "16x16",
-    href: "/favicon/favicon-16x16.png",
-  },
-  { rel: "manifest", href: "/favicon/site.webmanifest" },
-  {
-    rel: "mask-icon",
-    href: "/favicon/safari-pinned-tab.svg",
-    color: "#c94a87",
-  },
-  { rel: "shortcut icon", href: "/favicon.ico" },
-];
