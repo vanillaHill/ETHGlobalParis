@@ -1,6 +1,20 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import "@/styles/globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
+
+import AppProviders from "@/components/AppProviders";
+import { Inter } from "next/font/google";
+
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <AppProviders>
+      <div className={`${inter.className} font-sans`}>
+        <Component {...pageProps} />
+      </div>
+    </AppProviders>
+  );
 }
+
+export default App;
